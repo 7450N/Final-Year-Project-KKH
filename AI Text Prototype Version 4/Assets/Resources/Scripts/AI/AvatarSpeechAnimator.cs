@@ -12,11 +12,6 @@ public class AvatarSpeechAnimator : MonoBehaviour
 
     void Update()
     {
-        if (audioSource.clip != null)
-        {
-            Debug.Log("Audio is playing");
-        }
-
         if (isTalking && !wasTalking)
         {
             int randomIndex = Random.Range(0, talkingAnimationCount);
