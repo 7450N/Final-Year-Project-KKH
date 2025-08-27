@@ -205,6 +205,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Classroom 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3397988689457302532, guid: 911a522e822703745a1c1347c701a612, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.2825298
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397988689457302532, guid: 911a522e822703745a1c1347c701a612, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1149521
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397988689457302532, guid: 911a522e822703745a1c1347c701a612, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1149521
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728925908731992290, guid: 911a522e822703745a1c1347c701a612, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.2825298
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728925908731992290, guid: 911a522e822703745a1c1347c701a612, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1149521
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728925908731992290, guid: 911a522e822703745a1c1347c701a612, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1149521
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745069586748009786, guid: 911a522e822703745a1c1347c701a612, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.2825298
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745069586748009786, guid: 911a522e822703745a1c1347c701a612, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1149521
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745069586748009786, guid: 911a522e822703745a1c1347c701a612, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1149521
+      objectReference: {fileID: 0}
     - target: {fileID: 9217783574001663151, guid: 911a522e822703745a1c1347c701a612, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.33
