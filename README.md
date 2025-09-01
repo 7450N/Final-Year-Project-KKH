@@ -60,10 +60,12 @@ Our ultimate goal is to bridge the gap between virtual practice and real-world s
 10. **Reference the Prompt Path in LLM Components**  
     - In the **AI** GameObject, ensure all "AI Orchestrator" component has the correct prompt file path set.
 
-11. **Apply the Same Setup to the McDonald's Scene**  
+11. **Apply the Same Setup to the McDonald's Scene**
+
+12. 
    - Repeat steps above for the McDonald's scene to ensure consistent setup.
 
 ## During Play
 - Press Grab Button (Secondary Trigger) in Meta Quest 3/3s controller to turn on microphone and interact with the AI.
 
-
+For TTS Model, only whsiper-large-v3 and whsiper-large-v3-turbo are supported by groq right now
