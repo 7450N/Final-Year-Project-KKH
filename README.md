@@ -69,3 +69,6 @@ Our ultimate goal is to bridge the gap between virtual practice and real-world s
 - Press Grab Button (Secondary Trigger) in Meta Quest 3/3s controller to turn on microphone and interact with the AI.
 
 For TTS Model, only whsiper-large-v3 and whsiper-large-v3-turbo are supported by groq right now
+
+## Demo
+https://github.com/user-attachments/assets/0028b8d7-0605-4c68-8e1d-019e9b872a31
