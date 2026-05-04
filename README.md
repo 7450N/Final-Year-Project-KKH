@@ -1,74 +1,86 @@
-# Social Skill Practice with VR
+# 🥽 Social Skill Practice with VR
 
-## Project Description
+> **A Final Year Project developed in collaboration with KK Women’s and Children’s Hospital (KKH)**
 
-This project is developed in collaboration with **KK Women’s and Children’s Hospital** to support autistic children in overcoming socialization challenges.  
-It provides an interactive, game-based environment where children can practice conversations and social interactions in a safe and comfortable space before applying these skills in real-life situations.
+## 📖 Overview
 
-By using virtual characters and AI-driven dialogue, the system helps build confidence, reduce anxiety, and encourage gradual engagement with real people.  
-Our ultimate goal is to bridge the gap between virtual practice and real-world social interactions, empowering autistic children to communicate more comfortably.
+This VR application is designed to support autistic children in overcoming socialization challenges. It provides an interactive, game-based environment where users can practice conversations and social interactions in a safe, controlled, and comfortable space before applying these skills in real-life situations.
 
-## Steps to get started
-1. **Pull or Fork the Branch**  
-   Clone the repository or fork it to your own GitHub account.
+By integrating virtual characters with AI-driven dialogue, the system helps build confidence, reduce anxiety, and encourage gradual engagement with real people. Our ultimate goal is to bridge the gap between virtual practice and real-world social interactions, empowering neurodivergent children to communicate more comfortably.
 
-2. **Open the Project in Unity**  
-   - Launch Unity Editor  
-   - Go to **File → Open Scene → Classroom**
+---
 
-3. **Set Up NPC AI Keys**  
-   If you want to talk with the NPC, obtain API keys from the following providers:  
-   - **GroqCloud** (Free)  
-   - **Google LLM** (Free)  
-   - **Google TTS** (Free)  
-   - **ElevenLabs** (Partially Free)
+## ✨ Key Features
 
-4. **Create API Keys File**  
-   - Create a new folder: `Assets/Resources/Secure`  
-   - Inside, create a file named `APIKeys.txt` with the following structure:  
-     ```
-     Google_API_Key:yourkeyhere
-     Google_API_Key_TTS:yourkeyhere
-     Groq_API_Key:yourkeyhere
-     ElevenLabs_API_Key:yourkeyhere
-     ```
+* **Real-Time Voice Interaction:** Uses Speech-to-Text (STT) and Text-to-Speech (TTS) for natural, conversational flow.
+* **Dynamic AI Responses:** Powered by Large Language Models (LLMs) to generate context-aware, realistic NPC dialogue.
+* **Multiple Scenarios:** Practice environments include a **Classroom** and a **McDonald's**, simulating everyday social situations.
+* **Customizable Prompts:** Easily modify AI behaviors and scenarios via JSON prompt files.
 
-5. **Register and Generate Keys**  
-   Register with the AI services you plan to use and generate API keys.  
-   At a minimum, you will need:  
-   - Speech-to-Text provider  
-   - LLM provider  
-   - Text-to-Speech provider  
+## 🛠️ Technologies Used
 
-6. **Configure the AI Orchestrator**  
-   - Select the **AI** GameObject in the **Hierarchy** panel  
-   - In the **AI Orchestrator** component:  
-     - Configure all AI components you want to use  
-     - **Important:** Enable **only one** service per category (e.g., only one TTS provider to avoid overlapping voices)  
+* **Game Engine:** Unity 3D
+* **Hardware:** Meta Quest 3 / 3S
+* **AI Orchestration & Dialogue:** 
+  * GroqCloud (STT - *whisper-large-v3* / *whisper-large-v3-turbo*)
+  * Google LLM (Dialogue Generation)
+  * Google TTS & ElevenLabs (Voice Synthesis)
 
-7. **Add or Remove AI Components (Optional)**  
-   - All components are located in `Assets/Resources/Scripts/AI`  
-   - Add or remove as needed for your project  
+---
 
-8. **Fix UI Event System**  
-   - Remove any existing **Event System** in the scene; otherwise, UI may not work properly
+## 🚀 Getting Started
 
-9. **Edit Prompts**  
-    - Modify prompt `.json` files as desired  
-    - These are located under: `Assets/Resources/AI_Prompts`
+Follow these instructions to set up the project locally for development and testing.
 
-10. **Reference the Prompt Path in LLM Components**  
-    - In the **AI** GameObject, ensure all "AI Orchestrator" component has the correct prompt file path set.
+### 1. Prerequisites
+Before opening the project, ensure you have registered for the necessary API keys. At a minimum, you need one provider for each category:
+* **Speech-to-Text (STT):** GroqCloud (Free)
+* **Language Model (LLM):** Google LLM (Free)
+* **Text-to-Speech (TTS):** Google TTS (Free) or ElevenLabs (Partially Free)
 
-11. **Apply the Same Setup to the McDonald's Scene**
+### 2. Installation
+1. **Clone the Repository**  
+   Clone this repository or fork it to your personal GitHub account.
+2. **Open in Unity**  
+   Launch the Unity Editor, open the project, and navigate to **File → Open Scene → Classroom**.
 
-12. 
-   - Repeat steps above for the McDonald's scene to ensure consistent setup.
+### 3. API Key Configuration
+To communicate with the NPCs, you must configure your API keys locally. 
 
-## During Play
-- Press Grab Button (Secondary Trigger) in Meta Quest 3/3s controller to turn on microphone and interact with the AI.
+1. Navigate to `Assets/Resources/` and create a new folder named `Secure`.
+2. Inside `Assets/Resources/Secure`, create a text file named `APIKeys.txt`.
+3. Format the file exactly as follows, replacing the placeholder text with your actual keys:
 
-For TTS Model, only whsiper-large-v3 and whsiper-large-v3-turbo are supported by groq right now
+```text
+Google_API_Key:yourkeyhere
+Google_API_Key_TTS:yourkeyhere
+Groq_API_Key:yourkeyhere
+ElevenLabs_API_Key:yourkeyhere
+```
 
-## Demo
-https://github.com/user-attachments/assets/0028b8d7-0605-4c68-8e1d-019e9b872a31
+### 4. AI Orchestrator Setup
+1. In the **Hierarchy** panel, select the **AI** GameObject.
+2. Locate the **AI Orchestrator** component in the Inspector.
+3. Configure the AI components you wish to use.
+   > **⚠️ Important:** Enable **only one** service per category (e.g., only one TTS provider) to prevent overlapping voices or conflicting requests.
+4. *(Optional)* You can add or remove specific AI components as needed. All related scripts are located in `Assets/Resources/Scripts/AI`.
+
+### 5. Prompt & Scene Configuration
+1. **Set Prompts:** Modify the prompt behavior by editing the `.json` files located in `Assets/Resources/AI_Prompts`.
+2. **Link Prompts:** In the **AI** GameObject, ensure the **AI Orchestrator** component references the correct prompt file path.
+3. **Fix UI Events:** Delete any existing **Event System** GameObject generated by default in the scene to ensure custom VR UI elements function correctly.
+4. **McDonald's Scene:** Repeat steps 4 and 5 when opening the McDonald's scene to ensure a consistent setup across environments.
+
+---
+
+## 🎮 How to Play
+
+* **Interact:** Press the **Grab Button (Secondary Trigger)** on your Meta Quest 3/3s controller to activate the microphone and speak to the AI.
+* **Note on STT:** When using Groq for Speech-to-Text, please note that only `whisper-large-v3` and `whisper-large-v3-turbo` models are currently supported.
+
+---
+
+## 🎥 Demo
+
+Watch the project in action:  
+[View Gameplay Demo](https://github.com/user-attachments/assets/0028b8d7-0605-4c68-8e1d-019e9b872a31)
